@@ -47,13 +47,13 @@ public class CheckerBoard {
         
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numCols; col++) {
-                Rectangle rectangle = new Rectangle(col * rectangleWidth, row * rectangleHeight, rectangleWidth, rectangleHeight);
+                Rectangle rect = new Rectangle(col * rectangleWidth, row * rectangleHeight, rectangleWidth, rectangleHeight);
                 Color color = darkColor;
                 if ((col %2) == (row % 2)) {
                     color = lightColor;
                 }
-                rectangle.setFill(color);
-                anchorPane.getChildren().add(rectangle);
+                rect.setFill(color);
+                anchorPane.getChildren().add(rect);
             }
         }
         
